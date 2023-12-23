@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Market Manipulation</title>
+
+    <link rel="stylesheet" href="CSS/news.css">
+    <script src="JS/news.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css" integrity="sha512-yDUXOUWwbHH4ggxueDnC5vJv4tmfySpVdIcN1LksGZi8W8EVZv4uKGrQc0pVf66zS7LDhFJM7Zdeow1sw1/8Jw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    
+
+</head>
+<body>
+    <div class="navigation-bar">
+        <img src="Images/logo.png" alt="" class="logo">
+        
+        <div class="logo-name">
+          <p class="heading-1">Stock<p class="heading-2">Sense | News</p></p>
+        </div>
+
+        
+        <form onsubmit="event.preventDefault();" role="search">
+          <label for="search">Search for stuff</label>
+          <input id="search" type="search" placeholder="Search..." autofocus required />
+          <button id="search-bar"  type="submit" onclick="getStockNews()">Go</button>    
+        </form>
+
+
+    </div>
+
+    <div id="newsContainer"></div>
+</body>
+
+</html>

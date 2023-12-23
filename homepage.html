@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Market Manipulation</title>
+
+    <link rel="stylesheet" href="CSS/homepage.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+    <script src="JS/script4.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css" integrity="sha512-yDUXOUWwbHH4ggxueDnC5vJv4tmfySpVdIcN1LksGZi8W8EVZv4uKGrQc0pVf66zS7LDhFJM7Zdeow1sw1/8Jw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link
+      rel="stylesheet"
+
+      href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css"
+    >
+
+    <link
+      rel="stylesheet"
+
+      href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-solid.css"
+    >
+
+    <link
+      rel="stylesheet"
+
+      href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-regular.css"
+    >
+
+    <link
+      rel="stylesheet"
+
+      href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css"
+    >
+
+</head>
+<body>
+    <div class="navigation-bar">
+        <img src="Images/logo.png" alt="" class="logo">
+        
+        <div class="logo-name">
+          <p class="heading-1">Stock<p class="heading-2">Sense</p></p>
+        </div>
+
+        
+        <form onsubmit="event.preventDefault();" role="search">
+          <label for="search">Search for stuff</label>
+          <input id="search" type="search" placeholder="Search..." autofocus required />
+          <button id="search-bar"  type="submit" onclick="fetchStockData()">Go</button>    
+        </form>
+
+
+      </div>
+
+      <div>
+        <div>
+          <button onclick="fetchStockData('daily')">Daily</button>
+          <button onclick="fetchStockData('monthly')">Monthly</button>
+          <button onclick="fetchStockData('yearly')">Yearly</button>
+          <button onclick="fetchStockData('hourly')">Hourly</button>
+        </div>
+
+        <p id="chart-heading"></p>
+
+        <div id="stockChart"></div>
+        <button onclick="toggleChart('line')">Line Chart</button>
+        <button onclick="toggleChart('candlestick')">Candlestick Chart</button>
+    
+</body>
+
+</html>
